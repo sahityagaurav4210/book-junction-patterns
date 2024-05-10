@@ -1,0 +1,28 @@
+{
+  "name": "@book-junction/patterns",
+  "version": "1.0.0",
+  "description": "A repository for commonly used patterns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:commit-msg": "node scripts/commit_msg_generator.script.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahityagaurav4210/book-junction-patterns.git"
+  },
+  "keywords": [
+    "patterns",
+    "book-junction",
+    "book-junction-patterns"
+  ],
+  "author": "Gaurav Sahitya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahityagaurav4210/book-junction-patterns/issues"
+  },
+  "homepage": "https://github.com/sahityagaurav4210/book-junction-patterns#readme",
+  "dependencies": {
+    "clipboardy": "^4.0.0"
+  }
+}
