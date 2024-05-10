@@ -1,1 +1,3 @@
-console.log('Welcome to @book-junction/patterns');
+const Patterns = require('./patterns');
+
+module.exports = Patterns;
