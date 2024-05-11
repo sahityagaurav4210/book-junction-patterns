@@ -4,7 +4,7 @@
   "description": "A repository for commonly used patterns",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "generate:commit-msg": "node scripts/commit_msg_generator.script.mjs"
   },
   "repository": {
@@ -24,5 +24,8 @@
   "homepage": "https://github.com/sahityagaurav4210/book-junction-patterns#readme",
   "dependencies": {
     "clipboardy": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
