@@ -1,6 +1,6 @@
 ## Book Junction Patterns
 
-- Author: Gaurav Sahitya
+- Author: Gaurav Sahitya and Arshnoor Kaur
 - Version: v1.0
 
 ---
@@ -46,5 +46,5 @@ const password = Patterns.common.password.test('tesTing!23'); //true
 
 ## Know more about author
 
-| [Linkedin](https://www.linked.com/in/sahityagaurav4210) | [Github](https://www.github.com/sahityagaurav4210) |
+| [Linkedin](https://www.linkedin.com/in/sahityagaurav4210) | [Github](https://www.github.com/sahityagaurav4210) |
 | ------------------------------------------------------- | -------------------------------------------------- |
