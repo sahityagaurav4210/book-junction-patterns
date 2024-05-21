@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "generate:commit-msg": "node scripts/commit_msg_generator.script.mjs",
+    "generate:commit-msg": "node scripts/commit_msg_generator.script.js",
     "prepare": "husky"
   },
   "repository": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/sahityagaurav4210/book-junction-patterns#readme",
   "dependencies": {
-    "clipboardy": "^4.0.0"
+    "@book-junction/clipboard": "^1.0.1"
   },
   "devDependencies": {
     "husky": "^9.0.11",
