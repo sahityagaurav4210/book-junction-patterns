@@ -23,11 +23,11 @@
     "url": "https://github.com/sahityagaurav4210/book-junction-patterns/issues"
   },
   "homepage": "https://github.com/sahityagaurav4210/book-junction-patterns#readme",
-  "dependencies": {
-    "@book-junction/clipboard": "^1.0.1"
-  },
   "devDependencies": {
     "husky": "^9.0.11",
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "@book-junction/clipboard": "^1.1.2"
   }
 }

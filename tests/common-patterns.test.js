@@ -173,4 +173,121 @@ describe('common-patterns.test.js', function () {
       expect(Patterns.common.password.test('@Bc1034@test!2024')).toBe(true);
     });
   });
+
+  describe('dob pattern test cases', function () {
+
+    it('should validate 1999-07-30 as a valid dob', function () {
+      const result = Patterns.common.dob.test('1999-07-30');
+
+      expect(result).toBe(true);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should validate 1999-7-30 as a valid dob', function () {
+      const result = Patterns.common.dob.test('1999-7-30');
+
+      expect(result).toBe(true);
+      expect(typeof result).toBe('boolean');
+    });
+
+
+    it('should validate 1999/7/30 as a valid dob', function () {
+      const result = Patterns.common.dob.test('1999/7/30');
+
+      expect(result).toBe(true);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should validate 1999/07/30 as a valid dob', function () {
+      const result = Patterns.common.dob.test('1999/07/30');
+
+      expect(result).toBe(true);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should validate 30-07-1999 as a valid dob', function () {
+      const result = Patterns.common.dob.test('30-07-1999');
+
+      expect(result).toBe(true);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should validate 30-7-1999 as a valid dob', function () {
+      const result = Patterns.common.dob.test('30-7-1999');
+
+      expect(result).toBe(true);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should validate 30/7/1999 as a valid dob', function () {
+      const result = Patterns.common.dob.test('30/7/1999');
+
+      expect(result).toBe(true);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should validate 30/07/1999 as a valid dob', function () {
+      const result = Patterns.common.dob.test('30/07/1999');
+
+      expect(result).toBe(true);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should not validate 32/07/1999 as a valid dob', function () {
+      const result = Patterns.common.dob.test('32/07/1999');
+
+      expect(result).toBe(false);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should not validate 30/13/1999 as a valid dob', function () {
+      const result = Patterns.common.dob.test('30/13/1999');
+
+      expect(result).toBe(false);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should not validate 1999/13/30 as a valid dob', function () {
+      const result = Patterns.common.dob.test('1999/13/30');
+
+      expect(result).toBe(false);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should not validate 1999/07/32 as a valid dob', function () {
+      const result = Patterns.common.dob.test('1999/07/32');
+
+      expect(result).toBe(false);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should not validate 1999/7/32 as a valid dob', function () {
+      const result = Patterns.common.dob.test('1999/7/32');
+
+      expect(result).toBe(false);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should not validate 32-7-1999 as a valid dob', function () {
+      const result = Patterns.common.dob.test('32-7-1999');
+
+      expect(result).toBe(false);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should not validate 32-07-1999 as a valid dob', function () {
+      const result = Patterns.common.dob.test('32-07-1999');
+
+      expect(result).toBe(false);
+      expect(typeof result).toBe('boolean');
+    });
+
+    it('should not validate 30-17-1999 as a valid dob', function () {
+      const result = Patterns.common.dob.test('30-17-1999');
+
+      expect(result).toBe(false);
+      expect(typeof result).toBe('boolean');
+    });
+  });
+
 });
