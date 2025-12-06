@@ -1,6 +1,6 @@
 {
   "name": "@book-junction/patterns",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A repository for commonly used patterns",
   "main": "index.js",
   "types": "./index.d.ts",

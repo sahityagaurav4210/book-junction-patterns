@@ -171,15 +171,15 @@ describe('pi-pattern.test.js test cases', () => {
             expect(typeof result).toBe('boolean');
         });
 
-        it('should not validate C8765432 as a valid passport number', () => {
-            const result = Patterns.pi.passportNumber.test('C8765432');
+        it('should validate MA765432 as a valid passport number', () => {
+            const result = Patterns.pi.passportNumber.test('MA765432');
 
-            expect(result).toBe(false);
+            expect(result).toBe(true);
             expect(typeof result).toBe('boolean');
         });
 
-        it('should not validate O8765432 as a valid passport number', () => {
-            const result = Patterns.pi.passportNumber.test('O8765432');
+        it('should not validate 08765432 as a valid passport number', () => {
+            const result = Patterns.pi.passportNumber.test('08765432');
 
             expect(result).toBe(false);
             expect(typeof result).toBe('boolean');
