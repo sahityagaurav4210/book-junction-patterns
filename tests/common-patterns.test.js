@@ -37,46 +37,46 @@ describe('common-patterns.test.js', function () {
   });
 
   describe('phone pattern test cases', function () {
-    it('phone regex pattern should validate 8837573143', function () {
-      expect(Patterns.common.phone.test('8837573143')).toBe(true);
+    it('phone regex pattern should validate 9646560236', function () {
+      expect(Patterns.common.phone.test('9646560236')).toBe(true);
     });
 
-    it('phone regex pattern should validate 918837573143', function () {
-      expect(Patterns.common.phone.test('918837573143')).toBe(true);
+    it('phone regex pattern should validate 919646560236', function () {
+      expect(Patterns.common.phone.test('919646560236')).toBe(true);
     });
 
-    it('phone regex pattern should validate +918837573143', function () {
-      expect(Patterns.common.phone.test('+918837573143')).toBe(true);
+    it('phone regex pattern should validate +919646560236', function () {
+      expect(Patterns.common.phone.test('+919646560236')).toBe(true);
     });
 
-    it('phone regex pattern should not validate +9!8837573143', function () {
-      expect(Patterns.common.phone.test('+9!8837573143')).toBe(false);
+    it('phone regex pattern should not validate +9!9646560236', function () {
+      expect(Patterns.common.phone.test('+9!9646560236')).toBe(false);
     });
 
-    it('phone regex pattern should not validate 9!8837573143', function () {
-      expect(Patterns.common.phone.test('9!8837573143')).toBe(false);
+    it('phone regex pattern should not validate 9!9646560236', function () {
+      expect(Patterns.common.phone.test('9!9646560236')).toBe(false);
     });
 
-    it('phone regex pattern should not validate 8837573!43', function () {
-      expect(Patterns.common.phone.test('8837573!43')).toBe(false);
+    it('phone regex pattern should not validate 9637573!43', function () {
+      expect(Patterns.common.phone.test('9637573!43')).toBe(false);
     });
 
-    it('phone regex pattern should not validate 883757343', function () {
-      expect(Patterns.common.phone.test('883757343')).toBe(false);
+    it('phone regex pattern should not validate 963757343', function () {
+      expect(Patterns.common.phone.test('963757343')).toBe(false);
     });
 
-    it('phone regex pattern should not validate 8837573I43', function () {
-      expect(Patterns.common.phone.test('8837573I43')).toBe(false);
+    it('phone regex pattern should not validate 9937573I43', function () {
+      expect(Patterns.common.phone.test('9937573I43')).toBe(false);
     });
   });
 
   describe('email pattern test cases', function () {
-    it('email regex pattern should validate gauravsahitya@rediffmail.com', function () {
-      expect(Patterns.common.email.test('gauravsahitya@rediffmail.com')).toBe(true);
+    it('email regex pattern should validate gaurav@rediffmail.com', function () {
+      expect(Patterns.common.email.test('gaurav@rediffmail.com')).toBe(true);
     });
 
-    it('email regex pattern should validate dheerajkumar12757@gmail.com', function () {
-      expect(Patterns.common.email.test('dheerajkumar12757@gmail.com')).toBe(true);
+    it('email regex pattern should validate dheerajkumar22757@gmail.com', function () {
+      expect(Patterns.common.email.test('dheerajkumar22757@gmail.com')).toBe(true);
     });
 
     it('email regex pattern should validate dheeraj@gmail.com', function () {

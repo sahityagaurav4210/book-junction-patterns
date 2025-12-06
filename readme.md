@@ -1,9 +1,7 @@
 # Book Junction Patterns
 
 - Author: Gaurav Sahitya
-- Version: v1.0
-
----
+- Version: v1.2
 
 ## ![About](./images/about.png) About
 
@@ -12,7 +10,16 @@ This package contains all patterns commonly used in web and mobile development p
 - Commons
 - Personal Identification (PI)
 
----
+## ![Installation](./images/installation.png) Installation
+
+Please follow these steps to install this package into your project.
+
+```sh
+    npm install @book-junction/patterns
+```
+
+**Note:** This command requires Node.js; please install the latest version from its official website before running it.
+
 
 ## ![Usage](./images/usage.png) Usage
 
@@ -68,9 +75,8 @@ const passportNumber = Patterns.pi.passportNumber.test('M8765432'); // true
 - All email clients are supported by this package.
 - This package is a commonjs node package.
 
----
 
 ## ![Author](./images/author.png) Know more about author
 
-| [Linkedin](https://www.linkedin.com/in/sahityagaurav4210) | [Github](https://www.github.com/sahityagaurav4210) |
-| ------------------------------------------------------- | -------------------------------------------------- |
+Hello my name is Gaurav Sahitya - the author of this package. I'm a software engineer currently working at C-DAC (Meity, GoI). I have more than 2.5 years of experience of developing software systems, websites etc. For more information please visit my [profile](https://sgaurav.me). Please follow me on  [Linkedin](https://www.linkedin.com/in/sahityagaurav4210) and 
+[Github](https://www.github.com/sahityagaurav4210).

@@ -1,7 +1,3 @@
-// ==========================================================
-// 1. Interfaces for the nested Regex Objects
-// ==========================================================
-
 /**
  * Interface defining common, non-sensitive regex patterns.
  * Corresponds to patterns/commons.patterns.js
@@ -34,29 +30,31 @@ export interface PIRegex {
     readonly passportNumber: RegExp;
 }
 
-
-// ==========================================================
-// 2. Declaration of the exported Patterns Class
-// ==========================================================
-
 /**
  * Class that provides all the available patterns in this package as static properties.
- * Corresponds to patterns/index.js.
  */
 declare class Patterns {
-    // Note: TypeScript uses 'static readonly' for static getters defined in the JS class.
-
     /**
      * A readonly object that contains commonly used regex patterns.
+     * Usage:-
+     * Patterns.common.name.test('gaurav sahitya') //true
+     * Patterns.common.phone.test('9646560231') //true
+     * Patterns.common.email.test('gaurav@rediffmail.com') //true
+     * Patterns.common.password.test('Testing!23') //true
+     * Patterns.common.dob.test('1999-07-30') //true
      */
     static readonly common: CommonsRegex;
 
     /**
      * A readonly object that contains personal identification regex patterns
      * such as Aadhar Card number, PAN Number, VoterID Number etc.
+     * Usage:-
+     *  Patterns.pi.aadharNumber.test("8974-8520-1234") // true
+     *  Patterns.pi.panNumber.test("LCPCS1963A") // true
+     *  Patterns.pi.voterIdNumber.test('LCPCS1963A') // true
+     *  Patterns.pi.passportNumber.test('A1234567') // true
      */
     static readonly pi: PIRegex;
 }
 
-// 3. Export the class using CommonJS syntax (matching module.exports = Patterns)
 export = Patterns;
