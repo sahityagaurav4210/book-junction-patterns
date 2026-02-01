@@ -175,7 +175,6 @@ describe('common-patterns.test.js', function () {
   });
 
   describe('dob pattern test cases', function () {
-
     it('should validate 1999-07-30 as a valid dob', function () {
       const result = Patterns.common.dob.test('1999-07-30');
 
@@ -189,7 +188,6 @@ describe('common-patterns.test.js', function () {
       expect(result).toBe(true);
       expect(typeof result).toBe('boolean');
     });
-
 
     it('should validate 1999/7/30 as a valid dob', function () {
       const result = Patterns.common.dob.test('1999/7/30');
@@ -290,4 +288,59 @@ describe('common-patterns.test.js', function () {
     });
   });
 
+  describe('url pattern test cases', function () {
+    it('url regex pattern should validate https://www.example.com', function () {
+      expect(Patterns.common.url.test('https://www.example.com')).toBe(true);
+      expect(typeof Patterns.common.url.test('https://www.example.com')).toBe('boolean');
+    });
+
+    it('url regex pattern should validate http://example.com/path/to/resource?query=param', function () {
+      expect(Patterns.common.url.test('http://example.com/path/to/resource?query=param')).toBe(true);
+
+      expect(typeof Patterns.common.url.test('http://example.com/path/to/resource?query=param')).toBe('boolean');
+    });
+
+    it('url regex pattern should not validate ftp://example.com/resource', function () {
+      expect(Patterns.common.url.test('ftp://example.com/resource')).toBe(false);
+
+      expect(typeof Patterns.common.url.test('ftp://example.com/resource')).toBe('boolean');
+    });
+
+    it('url regex pattern should not validate www.example.com', function () {
+      expect(Patterns.common.url.test('www.example.com')).toBe(false);
+      expect(typeof Patterns.common.url.test('www.example.com')).toBe('boolean');
+    });
+
+    it('url regex pattern should not validate example', function () {
+      expect(Patterns.common.url.test('example')).toBe(false);
+      expect(typeof Patterns.common.url.test('example')).toBe('boolean');
+    });
+
+    it('url regex pattern should validate https://sub.domain-example.co.uk/path/', function () {
+      expect(Patterns.common.url.test('https://sub.domain-example.co.uk/path/')).toBe(true);
+
+      expect(typeof Patterns.common.url.test('https://sub.domain-example.co.uk/path/')).toBe('boolean');
+    });
+
+    it('url regex pattern should validate https://sub.domain-example.co.uk/path', function () {
+      expect(Patterns.common.url.test('https://sub.domain-example.co.uk/path')).toBe(true);
+
+      expect(typeof Patterns.common.url.test('https://sub.domain-example.co.uk/path')).toBe('boolean');
+    });
+
+    it('url regex pattern should validate http://localhost:8080/', function () {
+      expect(Patterns.common.url.test('http://localhost:8080/')).toBe(true);
+      expect(typeof Patterns.common.url.test('http://localhost:8080/')).toBe('boolean');
+    });
+
+    it('url regex pattern should not validate http//invalid-url', function () {
+      expect(Patterns.common.url.test('http//invalid-url')).toBe(false);
+      expect(typeof Patterns.common.url.test('http//invalid-url')).toBe('boolean');
+    });
+
+    it('url regex pattern should not validate https:/incomplete.com', function () {
+      expect(Patterns.common.url.test('https:/incomplete.com')).toBe(false);
+      expect(typeof Patterns.common.url.test('https:/incomplete.com')).toBe('boolean');
+    });
+  });
 });

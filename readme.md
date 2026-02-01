@@ -20,7 +20,6 @@ Please follow these steps to install this package into your project.
 
 **Note:** This command requires Node.js; please install the latest version from its official website before running it.
 
-
 ## ![Usage](./images/usage.png) Usage
 
 Let's see the paterns which are defined in the commons category.
@@ -48,6 +47,10 @@ const password = Patterns.common.password.test('tesTing!23'); //true
 // For checking date of birth
 
 const dob = Patterns.common.dob.test('1999-07-30'); //true
+
+// For checking http based urls
+
+const url = Patterns.common.url.test('https://www.example.com'); //true
 ```
 
 Now let's see the patterns which are defined in the personal identification category (pi)
@@ -69,14 +72,26 @@ const voterNumber = Patterns.pi.voterIdNumber.test('LAZ1775211'); // true
 const passportNumber = Patterns.pi.passportNumber.test('M8765432'); // true
 ```
 
+Now let's see the patterns which are defined in the forms category
+
+```javascript
+// Importing
+const Patterns = require('@book-junction/patterns');
+
+//Single line description
+const singleLineDesc = Patterns.forms.description.test('This is a sample description.'); // true
+
+//Multiline description
+const multilineDesc = Patterns.forms.multilineDescription.test('This is a sample\nmultiline description.'); // true
+```
+
 ## ![Points](./images/points.png) Points to consider
 
 - Password must be atleast 8 characters and atmost 32 characters long. It should also contain atleast one uppercase letter, one lowercase letter, one digit and one special character.
 - All email clients are supported by this package.
 - This package is a commonjs node package.
 
-
 ## ![Author](./images/author.png) Know more about author
 
-Hello my name is Gaurav Sahitya - the author of this package. I'm a software engineer currently working at C-DAC (Meity, GoI). I have more than 2.5 years of experience of developing software systems, websites etc. For more information please visit my [profile](https://sgaurav.me). Please follow me on  [Linkedin](https://www.linkedin.com/in/sahityagaurav4210) and 
+Hello my name is Gaurav Sahitya - the author of this package. I'm a software engineer currently working at C-DAC (Meity, GoI). I have more than 2.5 years of experience of developing software systems, websites etc. For more information please visit my [profile](https://sgaurav.me). Please follow me on [Linkedin](https://www.linkedin.com/in/sahityagaurav4210) and
 [Github](https://www.github.com/sahityagaurav4210).

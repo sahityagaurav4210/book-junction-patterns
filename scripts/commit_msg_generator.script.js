@@ -17,6 +17,8 @@ const message = process.argv[5];
 const description = process.argv[7];
 const date = new Date().toLocaleDateString('hi-In');
 
+console.log(typePlaceHolder);
+
 if (typePlaceHolder !== '--type' || messagePlaceHolder !== '--msg' || descriptionPlaceHolder !== '--desc') {
   console.error('Please provide --type, --msg and --desc arguments');
   process.exit(1);

@@ -1,5 +1,6 @@
 const Commons = require('./commons.patterns');
-const PI = require("./pi.patterns");
+const PI = require('./pi.patterns');
+const Forms = require('./forms.patterns');
 
 /**
  * @class Patterns - A class that provides all the available patterns in this package
@@ -19,6 +20,14 @@ class Patterns {
    */
   static get pi() {
     return PI;
+  }
+
+  /**
+   * @returns Forms - A readonly object that contains form-related regex patterns
+   * @description It is a static property that gives you access of all form-related regex patterns such as description, multiline description etc.
+   */
+  static get forms() {
+    return Forms;
   }
 }
 
